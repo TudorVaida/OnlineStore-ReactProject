@@ -41,7 +41,7 @@ function App() {
 	const searchHandler = (input) => {
 		setSearchInput(input);
 	};
-	console.log(process.env.PUBLIC_URL);
+
 	return (
 		<CartProvider>
 			<ShopProvider>
