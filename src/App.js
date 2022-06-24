@@ -56,10 +56,13 @@ function App() {
 					<Header onSearch={searchHandler} onShowCart={showCartHandler} />
 					<NavBar />
 					<Routes>
-						<Route path="/" element={<HomePage />} />
-						<Route path="/shop" element={<Shop input={searchInput} />} />
+						<Route path="/OnlineStore-ReactProject/" element={<HomePage />} />
 						<Route
-							path="/admin"
+							path="/OnlineStore-ReactProject/shop"
+							element={<Shop input={searchInput} />}
+						/>
+						<Route
+							path="/OnlineStore-ReactProject/admin"
 							element={
 								<Admin
 									input={searchInput}
