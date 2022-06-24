@@ -56,7 +56,7 @@ function App() {
 					<Header onSearch={searchHandler} onShowCart={showCartHandler} />
 					<NavBar />
 					<Routes>
-						<Route exact path="/" element={<HomePage />} />
+						<Route path="/" element={<HomePage />} />
 						<Route path="/shop" element={<Shop input={searchInput} />} />
 						<Route
 							path="/admin"
