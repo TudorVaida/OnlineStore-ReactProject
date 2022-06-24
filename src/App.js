@@ -6,7 +6,12 @@ import Shop from "./Components/Shop/Shop";
 import Cart from "./Components/Cart/Cart";
 import CartProvider from "./store/CartProvider";
 import ShopProvider from "./store/ShopProvider";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import {
+	HashRouter as Router,
+	Routes,
+	Route,
+	Redirect,
+} from "react-router-dom";
 import Admin from "./admin/Admin";
 
 import AddItemsForm from "./admin/AddItemsForm";
@@ -45,31 +50,30 @@ function App() {
 	return (
 		<CartProvider>
 			<ShopProvider>
-				<Router>
-					{modalAdminIsShown && (
-						<AddItemsForm onCLoseModalAdmin={hideModalAdminHandler} />
-					)}
-					{modalModifyIsShown && (
-						<ModifyForm onCLoseModalModify={hideModalModifyHandler} />
-					)}
-					{cartIsShown && <Cart onClose={hideCartHandler} />}
-					<Header onSearch={searchHandler} onShowCart={showCartHandler} />
-					<NavBar />
-					<Routes>
-						<Route path="/OnlineStore-ReactProject" element={<HomePage />} />
-						<Route path="/shop" element={<Shop input={searchInput} />} />
-						<Route
-							path="/admin"
-							element={
-								<Admin
-									input={searchInput}
-									onShowModalAdmin={showModalAdminHandler}
-									onShowModalModify={showModalModifyHandler}
-								/>
-							}
-						/>
-					</Routes>
-				</Router>
+				{modalAdminIsShown && (
+					<AddItemsForm onCLoseModalAdmin={hideModalAdminHandler} />
+				)}
+				{modalModifyIsShown && (
+					<ModifyForm onCLoseModalModify={hideModalModifyHandler} />
+				)}
+				{cartIsShown && <Cart onClose={hideCartHandler} />}
+				<Header onSearch={searchHandler} onShowCart={showCartHandler} />
+				<NavBar />
+				<Routes>
+					<Route path="/" element={<HomePage />} />
+					<Route path="/shop" element={<Shop input={searchInput} />} />
+					<Route
+						path="/admin"
+						element={
+							<Admin
+								input={searchInput}
+								onShowModalAdmin={showModalAdminHandler}
+								onShowModalModify={showModalModifyHandler}
+							/>
+						}
+					/>
+					<Redirect to="/" />
+				</Routes>
 			</ShopProvider>
 		</CartProvider>
 	);
