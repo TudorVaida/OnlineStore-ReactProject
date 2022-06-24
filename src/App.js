@@ -6,7 +6,7 @@ import Shop from "./Components/Shop/Shop";
 import Cart from "./Components/Cart/Cart";
 import CartProvider from "./store/CartProvider";
 import ShopProvider from "./store/ShopProvider";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Admin from "./admin/Admin";
 
 import AddItemsForm from "./admin/AddItemsForm";
