@@ -45,7 +45,7 @@ function App() {
 	return (
 		<CartProvider>
 			<ShopProvider>
-				<Router>
+				<Router basename={process.env.PUBLIC_URL}>
 					{modalAdminIsShown && (
 						<AddItemsForm onCLoseModalAdmin={hideModalAdminHandler} />
 					)}
