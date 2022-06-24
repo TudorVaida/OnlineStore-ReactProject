@@ -9,6 +9,7 @@ import ShopProvider from "./store/ShopProvider";
 import {
 	HashRouter as Router,
 	Routes,
+	Switch,
 	Route,
 	Redirect,
 } from "react-router-dom";
@@ -59,7 +60,7 @@ function App() {
 				{cartIsShown && <Cart onClose={hideCartHandler} />}
 				<Header onSearch={searchHandler} onShowCart={showCartHandler} />
 				<NavBar />
-				<Routes>
+				<Switch>
 					<Route path="/" element={<HomePage />} />
 					<Route path="/shop" element={<Shop input={searchInput} />} />
 					<Route
@@ -73,7 +74,7 @@ function App() {
 						}
 					/>
 					<Redirect to="/" />
-				</Routes>
+				</Switch>
 			</ShopProvider>
 		</CartProvider>
 	);
