@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/OnlineStore-ReactProject/static/css/main.d86502e6.chunk.css",
+    "main.js": "/OnlineStore-ReactProject/static/js/main.cbdcda72.chunk.js",
+    "main.js.map": "/OnlineStore-ReactProject/static/js/main.cbdcda72.chunk.js.map",
+    "runtime-main.js": "/OnlineStore-ReactProject/static/js/runtime-main.4207f82f.js",
+    "runtime-main.js.map": "/OnlineStore-ReactProject/static/js/runtime-main.4207f82f.js.map",
+    "static/css/2.ed1298f3.chunk.css": "/OnlineStore-ReactProject/static/css/2.ed1298f3.chunk.css",
+    "static/js/2.2b5ac140.chunk.js": "/OnlineStore-ReactProject/static/js/2.2b5ac140.chunk.js",
+    "static/js/2.2b5ac140.chunk.js.map": "/OnlineStore-ReactProject/static/js/2.2b5ac140.chunk.js.map",
+    "index.html": "/OnlineStore-ReactProject/index.html",
+    "static/css/2.ed1298f3.chunk.css.map": "/OnlineStore-ReactProject/static/css/2.ed1298f3.chunk.css.map",
+    "static/css/main.d86502e6.chunk.css.map": "/OnlineStore-ReactProject/static/css/main.d86502e6.chunk.css.map",
+    "static/js/2.2b5ac140.chunk.js.LICENSE.txt": "/OnlineStore-ReactProject/static/js/2.2b5ac140.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/OnlineStore-ReactProject/static/media/camo1.bf897527.jpg",
+    "static/media/carusel1.d54b6bfb.jpg": "/OnlineStore-ReactProject/static/media/carusel1.d54b6bfb.jpg",
+    "static/media/carusel2.3dae0dd7.jpg": "/OnlineStore-ReactProject/static/media/carusel2.3dae0dd7.jpg",
+    "static/media/carusel3.fa1e0712.jpg": "/OnlineStore-ReactProject/static/media/carusel3.fa1e0712.jpg",
+    "static/media/carusel4.a9b4c6da.jpg": "/OnlineStore-ReactProject/static/media/carusel4.a9b4c6da.jpg",
+    "static/media/genti-pescuit.bca1d25c.png": "/OnlineStore-ReactProject/static/media/genti-pescuit.bca1d25c.png",
+    "static/media/lanterne-felinare.1cb86fca.png": "/OnlineStore-ReactProject/static/media/lanterne-felinare.1cb86fca.png",
+    "static/media/logo.f8bfebee.png": "/OnlineStore-ReactProject/static/media/logo.f8bfebee.png",
+    "static/media/scaune-de-pescuit.5e996d91.png": "/OnlineStore-ReactProject/static/media/scaune-de-pescuit.5e996d91.png",
+    "static/media/search.7159ef6c.jpg": "/OnlineStore-ReactProject/static/media/search.7159ef6c.jpg",
+    "static/media/umbrele-corturi.85937d76.png": "/OnlineStore-ReactProject/static/media/umbrele-corturi.85937d76.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4207f82f.js",
+    "static/css/2.ed1298f3.chunk.css",
+    "static/js/2.2b5ac140.chunk.js",
+    "static/css/main.d86502e6.chunk.css",
+    "static/js/main.cbdcda72.chunk.js"
+  ]
+}
