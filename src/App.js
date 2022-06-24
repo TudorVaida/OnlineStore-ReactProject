@@ -6,13 +6,7 @@ import Shop from "./Components/Shop/Shop";
 import Cart from "./Components/Cart/Cart";
 import CartProvider from "./store/CartProvider";
 import ShopProvider from "./store/ShopProvider";
-import {
-	HashRouter as Router,
-	Routes,
-	Switch,
-	Route,
-	Redirect,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Admin from "./admin/Admin";
 
 import AddItemsForm from "./admin/AddItemsForm";
@@ -51,30 +45,31 @@ function App() {
 	return (
 		<CartProvider>
 			<ShopProvider>
-				{modalAdminIsShown && (
-					<AddItemsForm onCLoseModalAdmin={hideModalAdminHandler} />
-				)}
-				{modalModifyIsShown && (
-					<ModifyForm onCLoseModalModify={hideModalModifyHandler} />
-				)}
-				{cartIsShown && <Cart onClose={hideCartHandler} />}
-				<Header onSearch={searchHandler} onShowCart={showCartHandler} />
-				<NavBar />
-				<Switch>
-					<Route path="/" element={<HomePage />} />
-					<Route path="/shop" element={<Shop input={searchInput} />} />
-					<Route
-						path="/admin"
-						element={
-							<Admin
-								input={searchInput}
-								onShowModalAdmin={showModalAdminHandler}
-								onShowModalModify={showModalModifyHandler}
-							/>
-						}
-					/>
-					<Redirect to="/" />
-				</Switch>
+				<Router>
+					{modalAdminIsShown && (
+						<AddItemsForm onCLoseModalAdmin={hideModalAdminHandler} />
+					)}
+					{modalModifyIsShown && (
+						<ModifyForm onCLoseModalModify={hideModalModifyHandler} />
+					)}
+					{cartIsShown && <Cart onClose={hideCartHandler} />}
+					<Header onSearch={searchHandler} onShowCart={showCartHandler} />
+					<NavBar />
+					<Routes>
+						<Route exact path="/" element={<HomePage />} />
+						<Route path="/shop" element={<Shop input={searchInput} />} />
+						<Route
+							path="/admin"
+							element={
+								<Admin
+									input={searchInput}
+									onShowModalAdmin={showModalAdminHandler}
+									onShowModalModify={showModalModifyHandler}
+								/>
+							}
+						/>
+					</Routes>
+				</Router>
 			</ShopProvider>
 		</CartProvider>
 	);
