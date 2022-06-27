@@ -79,7 +79,7 @@ const AddItemsForm = (props) => {
 						id="type"
 						onChange={(e) => setType(e.target.value)}
 					>
-						<option value="none" selected disabled hidden>
+						<option value="none" disabled hidden>
 							Select an Option
 						</option>
 						<option value="1">Lansete</option>
